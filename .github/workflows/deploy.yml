@@ -1,9 +1,3 @@
----
-
-### 2. Pegar la receta de Vite
-En el cuadro de texto gigante de abajo (el editor de código), copia y pega esta configuración estándar oficial que usa GitHub para compilar proyectos de React con Vite:
-
-```yaml
 name: Deploy static content to Pages
 
 on:
@@ -24,7 +18,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps: deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
