@@ -1,0 +1,325 @@
+/* =========================
+   FUENTES
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Patrick+Hand&display=swap');
+
+/* =========================
+   VARIABLES GLOBALES
+========================= */
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --border: #e5e4e7;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --shadow: rgba(0, 0, 0, 0.15) 0 8px 12px;
+
+  font: 18px/145% system-ui, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* =========================
+   BODY (FONDO GENERAL)
+========================= */
+body {
+  margin: 0;
+  background-color: #ffffff;
+}
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
+#root {
+  width: 100%;
+  max-width: 1126px; 
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 10px 15px; 
+  gap: 10px;          
+}
+
+/* =========================
+   TIPOGRAFÍA
+========================= */
+.black-ops-one-regular {
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-size: 54px; 
+  color: #745168;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  line-height: 1.1;
+  margin: 0 0 5px 0; 
+  text-align: center;
+  width: 100%;
+}
+
+.texto-manuscrito {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #111;
+}
+
+/* =========================
+   PIZARRA CORCHO
+========================= */
+.pizarra-corcho {
+  position: relative;
+  margin-top: 5px;
+  padding: 15px;
+  width: 100%;        
+  max-width: 1000px; 
+  margin-left: auto;  
+  margin-right: auto; 
+  box-sizing: border-box;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+/* =========================
+   FORMULARIO PRINCIPAL
+========================= */
+.formulario-lineal {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+  gap: 20px; 
+  width: 100%;
+  max-width: 1000px; 
+  margin: 0 auto 30px auto; 
+  padding: 25px 30px; 
+  background-color: rgba(248, 249, 250, 0.85); 
+  border: 1px solid rgba(233, 235, 239, 0.6); 
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+}
+
+/* Contenedor horizontal para inputs, checkbox y botón */
+.formulario-controles {
+  display: flex;
+  flex-direction: row;       
+  align-items: center;       
+  justify-content: center;   
+  gap: 15px;                 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* =========================
+   INPUTS Y CONTROLES (ESTILIZADOS)
+========================= */
+.input-lineal {
+  flex: 1; 
+  min-width: 150px;          
+  max-width: 300px;          
+  height: 42px; 
+  padding: 0 16px; 
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #ffffff;
+  color: #212529;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.input-lineal:focus {
+  outline: none;
+  border-color: #745168; 
+  box-shadow: 0 0 0 3px rgba(116, 81, 104, 0.15);
+}
+
+.checkbox-lineal {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #4a4a4a; 
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.checkbox-lineal input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.btn-agregar-lineal {
+  height: 42px; 
+  background-color: #745168;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0 32px; 
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  box-sizing: border-box;
+}
+
+.btn-agregar-lineal:hover {
+  background-color: #5f4054;
+}
+
+.btn-agregar-lineal:active {
+  transform: scale(0.98);
+}
+
+/* =========================
+   TARJETAS DE NOTAS 
+========================= */
+.notas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)); 
+  gap: 25px;
+  padding: 15px 20px; 
+  width: 100%;        
+  box-sizing: border-box;
+}
+
+.nota-card {
+  position: relative;
+  background-color: #fffa9e;
+  color: #000000;
+  padding: 16px 12px 12px 12px; 
+  min-height: 140px; 
+  border-radius: 4px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  box-sizing: border-box;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nota-card:hover {
+  transform: scale(1.03) !important; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.nota-card.importante {
+  background-color: #ff523b;
+  color: #ffffff;
+}
+
+.nota-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nota-card.importante h3 {
+  color: #ffffff;
+}
+
+.nota-card p {
+  font-size: 14px;
+  line-height: 1.3;
+  margin: 0;
+  color: #111111;
+}
+
+.nota-card.importante p {
+  color: #ffffff;
+}
+
+.btn-eliminar {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+}
+
+.nota-card.importante .btn-eliminar {
+  color: #ffffff;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Para Tablets y pantallas medianas (menos de 900px) */
+@media (max-width: 900px) {
+  .notas-grid {
+    grid-template-columns: repeat(2, 1fr) !important; 
+    gap: 15px;
+  }
+}
+
+/* Para Celulares grandes y medianos (menos de 768px) */
+@media (max-width: 768px) {
+  .formulario-lineal {
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+
+  .formulario-controles {
+    flex-direction: column; 
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .input-lineal {
+    width: 100%;            
+    max-width: 1000px;
+  }
+
+  .checkbox-lineal {
+    justify-content: center; 
+    padding: 5px 0;
+  }
+
+  .btn-agregar-lineal {
+    width: 100%;            
+  }
+  
+  .black-ops-one-regular {
+    font-size: 42px;        
+  }
+}
+
+/* Para Celulares pequeños (menos de 480px) */
+@media (max-width: 480px) {
+  .black-ops-one-regular {
+    font-size: 32px;        
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .notas-grid {
+    grid-template-columns: 1fr !important; 
+    gap: 15px;
+    padding: 10px 5px;
+  }
+  
+  .nota-card {
+    max-width: 100%;        
+  }
+}
