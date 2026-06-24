@@ -24,8 +24,12 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('pizarra_corcho.jpg');    
-  background-repeat: repeat; 
-  background-position: top center;
+  
+  /* Agregamos esto para que cubra toda la pantalla y no haga mosaicos raros */
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-position: center;
+  
   min-height: 100vh; 
   display: flex;
   flex-direction: column;
@@ -40,12 +44,11 @@ body {
   width: 100%;
   max-width: 1126px; 
   margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  
+  /* Dejamos que el alto se adapte de forma natural al contenido */
   box-sizing: border-box;
-  padding: 10px 15px; 
-  gap: 10px;       
+  padding: 20px 15px 40px 15px; 
+  gap: 10px;        
 }
 
 /* =========================
