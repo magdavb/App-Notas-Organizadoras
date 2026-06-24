@@ -71,9 +71,9 @@ body {
 ========================= */
 .pizarra-corcho {
   position: relative;
-  margin-top: 5px;
+  margin-top: 20px; /* Le da un espacio sano con el formulario de arriba */
   padding: 15px;
-  padding-bottom: 40px; 
+  padding-bottom: 40px; /* Margen libre abajo para que las notas no toquen el borde */
   width: 100%;        
   max-width: 1000px; 
   margin-left: auto;  
@@ -81,11 +81,9 @@ body {
   box-sizing: border-box;
   border-radius: 12px;
   transition: all 0.3s ease;
-  min-height: 100vh; 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll; 
+  
+  /* NO le pongas aquí la imagen de fondo ni alturas fijas */
+  height: auto; 
 }
 
 /* =========================
