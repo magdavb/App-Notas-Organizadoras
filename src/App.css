@@ -2,31 +2,35 @@
    FUENTES
 ========================= */
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Patrick+Hand&display=swap');
-
 /* =========================
    VARIABLES GLOBALES
 ========================= */
 :root {
   --text: #6b6375;
   --text-h: #08060d;
-  --bg: #fff;
+  --bg: #dcc2c2;
   --border: #e5e4e7;
   --accent: #aa3bff;
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --shadow: rgba(0, 0, 0, 0.15) 0 8px 12px;
 
-  font: 18px/145% system-ui, 'Segoe UI', Roboto, sans-serif;
-  color: var(--text);
-  background: var(--bg);
 }
 
 /* =========================
-   BODY (FONDO GENERAL)
+   BODY
 ========================= */
 body {
   margin: 0;
-  background-color: #ffffff;
+  padding: 0;
+  background-image: url('pizarra_corcho.jpg');    
+  background-repeat: repeat; 
+  background-position: top center;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  font: 18px/145% system-ui, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
 }
 
 /* =========================
@@ -41,7 +45,7 @@ body {
   flex-direction: column;
   box-sizing: border-box;
   padding: 10px 15px; 
-  gap: 10px;          
+  gap: 10px;       
 }
 
 /* =========================
@@ -71,9 +75,10 @@ body {
 ========================= */
 .pizarra-corcho {
   position: relative;
-  margin-top: 20px; /* Le da un espacio sano con el formulario de arriba */
-  padding: 15px;
-  padding-bottom: 40px; /* Margen libre abajo para que las notas no toquen el borde */
+  margin-top: 20px;
+  padding: 30px; 
+  padding-bottom: 60px;
+  
   width: 100%;        
   max-width: 1000px; 
   margin-left: auto;  
@@ -81,9 +86,7 @@ body {
   box-sizing: border-box;
   border-radius: 12px;
   transition: all 0.3s ease;
-  
-  /* NO le pongas aquí la imagen de fondo ni alturas fijas */
-  height: auto; 
+  height: auto;
 }
 
 /* =========================
