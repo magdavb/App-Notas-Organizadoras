@@ -23,13 +23,11 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url('./pizarra_corcho.jpg');    
   
-  /* Agregamos esto para que cubra toda la pantalla y no haga mosaicos raros */
-  background-repeat: no-repeat; 
-  background-size: cover;
-  background-position: center;
+  background-image: url('../pizarra_corcho.jpg');    
   
+  background-repeat: repeat; 
+  background-position: top center;
   min-height: 100vh; 
   display: flex;
   flex-direction: column;
@@ -44,8 +42,6 @@ body {
   width: 100%;
   max-width: 1126px; 
   margin: 0 auto;
-  
-  /* Dejamos que el alto se adapte de forma natural al contenido */
   box-sizing: border-box;
   padding: 20px 15px 40px 15px; 
   gap: 10px;        
@@ -125,7 +121,7 @@ body {
 }
 
 /* =========================
-   INPUTS Y CONTROLES (ESTILIZADOS)
+   INPUTS Y CONTROLES 
 ========================= */
 .input-lineal {
   flex: 1; 
