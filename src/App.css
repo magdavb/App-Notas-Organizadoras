@@ -73,6 +73,10 @@ body {
   position: relative;
   margin-top: 5px;
   padding: 15px;
+  
+  /* Esto asegura un espacio cómodo abajo en celulares para que las notas no toquen el borde */
+  padding-bottom: 40px; 
+  
   width: 100%;        
   max-width: 1000px; 
   margin-left: auto;  
@@ -80,6 +84,13 @@ body {
   box-sizing: border-box;
   border-radius: 12px;
   transition: all 0.3s ease;
+
+  /* En vez de un alto fijo si es que lo tenías en otra parte, o para forzar el crecimiento: */
+  min-height: 100vh; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll; 
 }
 
 /* =========================
